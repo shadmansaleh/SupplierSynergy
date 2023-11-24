@@ -61,19 +61,6 @@ public class HomePage extends javax.swing.JFrame {
         txt_porderscount.setText(String.valueOf(DBConnection.getQueryValue("SELECT COUNT(*) FROM Orders WHERE status=\"PENDING\"")));
     }
 
-    public int get_bookcount() {
-        try {
-            Connection con = new DBConnection().getConnection();
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT COUNT(*) FROM book_details");
-            if (rs.next()) return rs.getInt(1);
-            return 0;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
-    
     public void switchpage(int idx){
         idx -= 1;
         sbpanels.get(sbcurActive).setBackground(new Color(51,51,51));
