@@ -1,7 +1,6 @@
-### Booksh
+### SupplierSynergy
 
-A library management system built on java swing.
+A Supply Chain Management System made on MySQL and Java Swing.
 
-Project for CSE-202 (Java) course by:
+Project for CSE-252 (DBMS) course by:
 - Shadman Saleh  (u2004030@student.cuet.ac.bd)
-- Raihanul Hasan (u2004031@student.cuet.ac.bd)
