@@ -36,7 +36,7 @@ NO_OF_EMPLOYEE_PHONES = NO_OF_EMPLOYEES * 2
 #  Employee (employee_id, first_name, last_name, email, salary, warehouse_id) PK: employee_id FK: warehouse_id
 #  Retailer (retailer_id, name, phone, address, email) PK: retailer_id FK: None
 #  Certification (certification_id, name, authorized_by) PK: certification_id FK: None
-#  Orders (order_id, status, oder_time, quantity, retailer_id, product_id) PK: order_id FK: retailer_id, product_id
+#  Orders (order_id, status, order_time, quantity, retailer_id, product_id) PK: order_id FK: retailer_id, product_id
 #  Has_Certification (certification_id, supplier_id, expires) PK: (supplier_id, certification_id) FK: supplier_id, certification_id
 #  Stored_at (product_id, warehouse_id, quantity) PK: (product_id, warehouse_id) FK: product_id, warehouse_id
 #  Employee_phone (employee_id, phone) PK: (phone, employee_id) FK: employee_id
@@ -191,7 +191,7 @@ def fill_orders_table():
     quantity = fake.random_int(min=1, max=1000)
     retailer_id = fake.random_element(elements=retailer_ids)
     product_id = fake.random_element(elements=product_ids)
-    sql = "INSERT INTO Orders (order_id, status, oder_time, quantity, retailer_id, product_id) VALUES (%s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO Orders (order_id, status, order_time, quantity, retailer_id, product_id) VALUES (%s, %s, %s, %s, %s, %s)"
     val = (i+1, status, order_time, quantity, retailer_id, product_id)
     mycursor.execute(sql, val)
     order_ids.append(mycursor.lastrowid)

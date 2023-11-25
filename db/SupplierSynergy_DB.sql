@@ -74,7 +74,7 @@ CREATE TABLE Orders
 (
   order_id INT NOT NULL AUTO_INCREMENT,
   status VARCHAR(10) NOT NULL,
-  oder_time DATE NOT NULL,
+  order_time DATE NOT NULL,
   quantity INT NOT NULL,
   retailer_id INT NOT NULL,
   product_id INT NOT NULL,

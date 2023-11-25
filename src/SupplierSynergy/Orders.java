@@ -40,7 +40,7 @@ public class Orders extends javax.swing.JPanel {
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 210, 90));
 
         tbl_suppliers.setLIMIT(100);
-        tbl_suppliers.setSQLQuery("SELECT order_id, Product.name AS Item, Retailer.name AS Client, oder_time AS order_time, quantity, status FROM Orders INNER JOIN Product on Product.product_id = Orders.product_id INNER JOIN Retailer on Retailer.retailer_id = Orders.retailer_id ORDER BY order_id");
+        tbl_suppliers.setSQLQuery("SELECT order_id, Product.name AS Item, Retailer.name AS Client, order_time, quantity, status FROM Orders INNER JOIN Product on Product.product_id = Orders.product_id INNER JOIN Retailer on Retailer.retailer_id = Orders.retailer_id ORDER BY order_id");
         jScrollPane1.setViewportView(tbl_suppliers);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1200, 650));
