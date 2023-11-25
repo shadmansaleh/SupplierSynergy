@@ -2,38 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package SypplierSynergy;
-
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Vector;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import java.sql.*;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JScrollBar;
+package SupplierSynergy;
 
 /**
  *
  * @author shadman
  */
-public class Suppliers extends javax.swing.JPanel {
+public class Employees extends javax.swing.JPanel {
 
     /**
-     * Creates new form Suppliers
+     * Creates new form ManageBooksPanel
      */
-
-    public Suppliers() {
+    public Employees() {
         initComponents();
-        JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
-        verticalScrollBar.setUnitIncrement(20);
-        verticalScrollBar.setBlockIncrement(200);
     }
 
     /**
@@ -45,19 +26,18 @@ public class Suppliers extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        title = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_suppliers = new lib.JSqlTablel1();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(1200, 760));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        title.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
-        title.setForeground(new java.awt.Color(251, 51, 51));
-        title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Books_52px_1.png"))); // NOI18N
-        title.setText("Suppliers");
-        add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 270, 90));
+        jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(251, 51, 51));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Book_50px_1.png"))); // NOI18N
+        jLabel11.setText("Employees");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 290, 70));
 
         tbl_suppliers.setLIMIT(100);
         tbl_suppliers.setSQLQuery("SELECT * FROM Supplier");
@@ -68,8 +48,8 @@ public class Suppliers extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JScrollPane jScrollPane1;
     private lib.JSqlTablel1 tbl_suppliers;
-    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

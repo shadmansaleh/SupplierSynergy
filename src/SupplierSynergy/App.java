@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package SypplierSynergy;
+package SupplierSynergy;
 
 /**
  *
- * @author Adil313
+ * @author shadmansaleh
  */
-public class LibraryManagement2 {
+public class App {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        new SypplierSynergy.LoginPage().setVisible(true);
+        new SupplierSynergy.LoginPage().setVisible(true);
     }
     
 }

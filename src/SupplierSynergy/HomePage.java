@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package SypplierSynergy;
+package SupplierSynergy;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -160,12 +160,12 @@ public class HomePage extends javax.swing.JFrame {
         jSqlTablel11 = new lib.JSqlTablel1();
         jScrollPane3 = new javax.swing.JScrollPane();
         jSqlTablel12 = new lib.JSqlTablel1();
-        suppliers = new SypplierSynergy.Suppliers();
-        retailers = new SypplierSynergy.Retailers();
-        oders = new SypplierSynergy.Orders();
-        products = new SypplierSynergy.Products();
-        employees = new SypplierSynergy.Employees();
-        custom_query = new SypplierSynergy.CustomQuery();
+        suppliers = new SupplierSynergy.Suppliers();
+        retailers = new SupplierSynergy.Retailers();
+        oders = new SupplierSynergy.Orders();
+        products = new SupplierSynergy.Products();
+        employees = new SupplierSynergy.Employees();
+        custom_query = new SupplierSynergy.CustomQuery();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Booksh");
@@ -289,7 +289,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl7.setText("Custom Query");
         sbp7.add(sbl7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 300, 60));
+        sidebar.add(sbp7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 300, 60));
 
         sbp6.setBackground(new java.awt.Color(51, 51, 51));
         sbp6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -311,7 +311,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl6.setText("Employees");
         sbp6.add(sbl6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 300, 60));
+        sidebar.add(sbp6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 300, 60));
 
         sbp5.setBackground(new java.awt.Color(51, 51, 51));
         sbp5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -333,7 +333,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl5.setText("Products");
         sbp5.add(sbl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 300, 60));
+        sidebar.add(sbp5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 300, 60));
 
         sbp4.setBackground(new java.awt.Color(51, 51, 51));
         sbp4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -355,7 +355,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl4.setText("Oders");
         sbp4.add(sbl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 300, 60));
+        sidebar.add(sbp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 300, 60));
 
         sbp3.setBackground(new java.awt.Color(51, 51, 51));
         sbp3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -377,7 +377,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl3.setText("Retailers");
         sbp3.add(sbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 300, 60));
+        sidebar.add(sbp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 300, 60));
 
         sbp2.setBackground(new java.awt.Color(51, 51, 51));
         sbp2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -399,7 +399,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl2.setText("Suppliers");
         sbp2.add(sbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 300, 60));
+        sidebar.add(sbp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 300, 60));
 
         sbp1.setBackground(new java.awt.Color(251, 51, 51));
         sbp1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -421,12 +421,12 @@ public class HomePage extends javax.swing.JFrame {
         sbl1.setText("Dashboard");
         sbp1.add(sbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 60));
+        sidebar.add(sbp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 300, 60));
 
         jLabel5.setFont(new java.awt.Font("Glass Antiqua", 1, 22)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Tables");
-        sidebar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 70, 30));
+        sidebar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 70, 30));
 
         getContentPane().add(sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 300, 730));
 
@@ -721,8 +721,8 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public SypplierSynergy.CustomQuery custom_query;
-    public SypplierSynergy.Employees employees;
+    public SupplierSynergy.CustomQuery custom_query;
+    public SupplierSynergy.Employees employees;
     public javax.swing.JPanel home_page;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
@@ -751,11 +751,11 @@ public class HomePage extends javax.swing.JFrame {
     private lib.JSqlTablel1 jSqlTablel12;
     private javax.swing.JLabel lbl_username;
     private javax.swing.JTabbedPane main_view;
-    public SypplierSynergy.Orders oders;
+    public SupplierSynergy.Orders oders;
     private javax.swing.JPanel pnl_pichart;
-    public SypplierSynergy.Products products;
+    public SupplierSynergy.Products products;
     private rojerusan.RSLabelImage rSLabelImage1;
-    public SypplierSynergy.Retailers retailers;
+    public SupplierSynergy.Retailers retailers;
     private javax.swing.JLabel sbl1;
     private javax.swing.JLabel sbl2;
     private javax.swing.JLabel sbl3;
@@ -771,7 +771,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JPanel sbp6;
     private javax.swing.JPanel sbp7;
     private javax.swing.JPanel sidebar;
-    public SypplierSynergy.Suppliers suppliers;
+    public SupplierSynergy.Suppliers suppliers;
     private javax.swing.JLabel txt_employeecount;
     private javax.swing.JLabel txt_porderscount;
     private javax.swing.JLabel txt_ratailercount;

@@ -11,9 +11,9 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import rojerusan.RSTableMetro;
 import java.sql.*;
-import SypplierSynergy.DBConnection;
-import SypplierSynergy.Globals;
-import SypplierSynergy.HomePage;
+import SupplierSynergy.DBConnection;
+import SupplierSynergy.Globals;
+import SupplierSynergy.HomePage;
 import java.awt.BorderLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -31,11 +31,26 @@ public class JSqlTablel1 extends RSTableMetro {
     private int LIMIT = 0;
     DefaultTableModel model = new DefaultTableModel();
     RSTableMetro tbl = this;
-    
+    Vector<String> tbl_heads = new Vector<>();
+    private String SQLWhere = "";
 
 
+    public String getSQLWhere() {
+        return SQLWhere;
+    }
+
+    public void setSQLWhere(String Where) {
+        this.SQLWhere = " WHERE " + Where;
+        tbl.setModel(model);
+        load_data();
+        repaint();
+    }
     public String getSQLQuery() {
         return SQLQuery;
+    }
+
+    public Vector<String> getHeads() {
+        return tbl_heads;
     }
 
     public void setSQLQuery(String query) {
@@ -57,15 +72,16 @@ public class JSqlTablel1 extends RSTableMetro {
         try {
             if (!SQLQuery.equals("")) {
                 Connection con = DBConnection.getConnection();
-                PreparedStatement pat = con.prepareStatement(SQLQuery + (LIMIT == 0 ? "" : " LIMIT " + String.valueOf(LIMIT)));
+                PreparedStatement pat = con.prepareStatement(SQLQuery + SQLWhere + (LIMIT == 0 ? "" : " LIMIT " + String.valueOf(LIMIT)));
 
                 ResultSet rs = pat.executeQuery();
                 var metadata = rs.getMetaData();
                 var tot_columns = metadata.getColumnCount();
                 Vector<String> columns = new Vector<>();
                 for (int i = 1; i <= tot_columns; i++) {
-                    columns.add(metadata.getColumnName(i));
+                    columns.add(metadata.getColumnLabel(i));
                 }
+                tbl_heads = columns;
                 
                 model.setColumnCount(tot_columns);
                 model.setRowCount(0);
@@ -101,7 +117,18 @@ public class JSqlTablel1 extends RSTableMetro {
         tbl.setFuenteHead(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         tbl.setRowHeight(40);
 
+        // new colors
+        tbl.setBackground(new java.awt.Color(0, 102, 102));
+        tbl.setColorBordeFilas(new java.awt.Color(0, 102, 102));
+        tbl.setColorBordeHead(new java.awt.Color(0, 102, 102));
+        tbl.setColorFilasBackgound1(new java.awt.Color(0, 102, 102));
+        tbl.setColorFilasBackgound2(new java.awt.Color(0, 153, 153));
+        tbl.setColorFilasForeground1(new java.awt.Color(255, 255, 255));
+        tbl.setColorFilasForeground2(new java.awt.Color(255, 255, 255));
+        tbl.setShowGrid(false);
+
         load_data();
     }
+
 
 }

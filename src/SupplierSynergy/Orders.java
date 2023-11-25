@@ -2,28 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package SypplierSynergy;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.Vector;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollBar;
-import javax.swing.table.DefaultTableModel;
+package SupplierSynergy;
 
 /**
  *
  * @author shadman
  */
-public class Retailers extends javax.swing.JPanel {
+public class Orders extends javax.swing.JPanel {
 
     /**
      * Creates new form ManageBooksPanel
      */
-
-    public Retailers() {
+    public Orders() {
         initComponents();
     }
 
@@ -45,15 +35,15 @@ public class Retailers extends javax.swing.JPanel {
 
         jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(251, 51, 51));
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Student_Male_100px.png"))); // NOI18N
-        jLabel11.setText("Retailers");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 260, 90));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Book_50px_1.png"))); // NOI18N
+        jLabel11.setText("Orders");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 210, 90));
 
         tbl_suppliers.setLIMIT(100);
-        tbl_suppliers.setSQLQuery("SELECT * FROM Retailer");
+        tbl_suppliers.setSQLQuery("SELECT order_id, Product.name AS Item, Retailer.name AS Client, oder_time AS order_time, quantity, status FROM Orders INNER JOIN Product on Product.product_id = Orders.product_id INNER JOIN Retailer on Retailer.retailer_id = Orders.retailer_id ORDER BY order_id");
         jScrollPane1.setViewportView(tbl_suppliers);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1200, 610));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1200, 650));
     }// </editor-fold>//GEN-END:initComponents
 
 
