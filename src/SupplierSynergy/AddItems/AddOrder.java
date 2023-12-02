@@ -8,12 +8,12 @@ package SupplierSynergy.AddItems;
  *
  * @author shadman
  */
-public class AddSupplier extends javax.swing.JFrame {
+public class AddOrder extends javax.swing.JFrame {
 
     /**
      * Creates new form AddSupplier
      */
-    public AddSupplier() {
+    public AddOrder() {
         initComponents();
     }
 
@@ -37,8 +37,6 @@ public class AddSupplier extends javax.swing.JFrame {
         txt_bookid4 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txt_bookid5 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txt_bookid6 = new javax.swing.JTextField();
         rSMaterialButtonCircle1 = new necesario.RSMaterialButtonCircle();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -54,7 +52,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(51, 102, 255));
         jLabel1.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel1.setText("Name");
+        jLabel1.setText("Product");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
 
         txt_bookid.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -69,7 +67,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(51, 102, 255));
         jLabel2.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel2.setText("Address");
+        jLabel2.setText("Order Time");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
 
         txt_bookid1.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -84,7 +82,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel3.setBackground(new java.awt.Color(51, 102, 255));
         jLabel3.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel3.setText("Contact Name");
+        jLabel3.setText("Quantity");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
 
         txt_bookid2.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -99,7 +97,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(51, 102, 255));
         jLabel5.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel5.setText("Contact Phone");
+        jLabel5.setText("Retailer");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, -1, -1));
 
         txt_bookid4.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -114,7 +112,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(51, 102, 255));
         jLabel6.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel6.setText("Contact Email");
+        jLabel6.setText("Order Status");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, -1, -1));
 
         txt_bookid5.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -125,21 +123,6 @@ public class AddSupplier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txt_bookid5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, 230, 30));
-
-        jLabel7.setBackground(new java.awt.Color(51, 102, 255));
-        jLabel7.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel7.setText("Rating");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, -1, -1));
-
-        txt_bookid6.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        txt_bookid6.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(51, 102, 255)));
-        txt_bookid6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_bookid6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txt_bookid6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 310, 230, 30));
 
         rSMaterialButtonCircle1.setText("Add");
         rSMaterialButtonCircle1.addActionListener(new java.awt.event.ActionListener() {
@@ -165,7 +148,7 @@ public class AddSupplier extends javax.swing.JFrame {
 
         title.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
-        title.setText("Add Supplier");
+        title.setText("Add Order");
         jPanel4.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 270, 90));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 100));
@@ -196,10 +179,6 @@ public class AddSupplier extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_bookid5ActionPerformed
 
-    private void txt_bookid6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_bookid6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_bookid6ActionPerformed
-
     private void rSMaterialButtonCircle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rSMaterialButtonCircle1ActionPerformed
@@ -226,20 +205,23 @@ public class AddSupplier extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddOrder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddOrder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddOrder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddOrder.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddSupplier().setVisible(true);
+                new AddOrder().setVisible(true);
             }
         });
     }
@@ -251,7 +233,6 @@ public class AddSupplier extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
@@ -262,6 +243,5 @@ public class AddSupplier extends javax.swing.JFrame {
     private javax.swing.JTextField txt_bookid2;
     private javax.swing.JTextField txt_bookid4;
     private javax.swing.JTextField txt_bookid5;
-    private javax.swing.JTextField txt_bookid6;
     // End of variables declaration//GEN-END:variables
 }

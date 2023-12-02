@@ -8,12 +8,12 @@ package SupplierSynergy.AddItems;
  *
  * @author shadman
  */
-public class AddSupplier extends javax.swing.JFrame {
+public class AddEmployee extends javax.swing.JFrame {
 
     /**
      * Creates new form AddSupplier
      */
-    public AddSupplier() {
+    public AddEmployee() {
         initComponents();
     }
 
@@ -54,7 +54,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(51, 102, 255));
         jLabel1.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel1.setText("Name");
+        jLabel1.setText("First Name");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
 
         txt_bookid.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -69,7 +69,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(51, 102, 255));
         jLabel2.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel2.setText("Address");
+        jLabel2.setText("Warehouse");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
 
         txt_bookid1.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -84,7 +84,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel3.setBackground(new java.awt.Color(51, 102, 255));
         jLabel3.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel3.setText("Contact Name");
+        jLabel3.setText("Employee phone");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
 
         txt_bookid2.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -99,7 +99,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(51, 102, 255));
         jLabel5.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel5.setText("Contact Phone");
+        jLabel5.setText("Last Name");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, -1, -1));
 
         txt_bookid4.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -129,7 +129,7 @@ public class AddSupplier extends javax.swing.JFrame {
         jLabel7.setBackground(new java.awt.Color(51, 102, 255));
         jLabel7.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel7.setText("Rating");
+        jLabel7.setText("Salary");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, -1, -1));
 
         txt_bookid6.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -165,7 +165,7 @@ public class AddSupplier extends javax.swing.JFrame {
 
         title.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
-        title.setText("Add Supplier");
+        title.setText("Add Employee");
         jPanel4.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 270, 90));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 100));
@@ -226,20 +226,27 @@ public class AddSupplier extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddSupplier.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddSupplier().setVisible(true);
+                new AddEmployee().setVisible(true);
             }
         });
     }

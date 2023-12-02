@@ -54,7 +54,6 @@ public class AddRetailer extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
 
         txt_bookid.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        txt_bookid.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookid.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(51, 102, 255)));
         txt_bookid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +69,6 @@ public class AddRetailer extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
 
         txt_bookid1.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        txt_bookid1.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookid1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(51, 102, 255)));
         txt_bookid1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +84,6 @@ public class AddRetailer extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, -1, -1));
 
         txt_bookid4.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        txt_bookid4.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookid4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(51, 102, 255)));
         txt_bookid4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +99,6 @@ public class AddRetailer extends javax.swing.JFrame {
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, -1, -1));
 
         txt_bookid5.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        txt_bookid5.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookid5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(51, 102, 255)));
         txt_bookid5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

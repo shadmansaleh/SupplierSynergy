@@ -3,7 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package SupplierSynergy;
-
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Vector;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import java.sql.*;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JScrollBar;
 /**
  *
  * @author shadman
@@ -28,7 +41,13 @@ public class Products extends javax.swing.JPanel {
 
         jLabel11 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_suppliers = new lib.JSqlTablel1();
+        tbl = new lib.JSqlTablel1();
+        txt_serach = new javax.swing.JTextField();
+        btn_search = new necesario.RSMaterialButtonCircle();
+        jPanel1 = new javax.swing.JPanel();
+        btn_remove = new javax.swing.JButton();
+        btn_add = new javax.swing.JButton();
+        btn_add1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -39,17 +58,116 @@ public class Products extends javax.swing.JPanel {
         jLabel11.setText("Products");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 190, 90));
 
-        tbl_suppliers.setLIMIT(100);
-        tbl_suppliers.setSQLQuery("SELECT Product.product_id, Product.name AS name, description, unit_price AS price, Supplier.name AS Supplier FROM Product INNER JOIN Supplier_Product ON Supplier_Product.product_id = Product.product_id INNER JOIN Supplier ON Supplier_Product.supplier_id = Supplier.supplier_id ORDER BY product_id ASC");
-        jScrollPane1.setViewportView(tbl_suppliers);
+        tbl.setLIMIT(100);
+        tbl.setSQLQuery("SELECT Product.product_id, Product.name AS name, description, unit_price AS price, Supplier.name AS Supplier FROM Product INNER JOIN Supplier_Product ON Supplier_Product.product_id = Product.product_id INNER JOIN Supplier ON Supplier_Product.supplier_id = Supplier.supplier_id ORDER BY product_id ASC");
+        jScrollPane1.setViewportView(tbl);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1200, 650));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1200, 560));
+
+        txt_serach.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(102, 102, 251)));
+        txt_serach.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_serachActionPerformed(evt);
+            }
+        });
+        add(txt_serach, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, 250, 40));
+
+        btn_search.setText("Serach");
+        btn_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_searchActionPerformed(evt);
+            }
+        });
+        add(btn_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 50, 120, 50));
+
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btn_remove.setBackground(new java.awt.Color(255, 51, 51));
+        btn_remove.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        btn_remove.setForeground(new java.awt.Color(255, 255, 255));
+        btn_remove.setText("Remove");
+        btn_remove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_removeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_remove, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 30, -1, 30));
+
+        btn_add.setBackground(new java.awt.Color(255, 255, 0));
+        btn_add.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        btn_add.setText("link");
+        btn_add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_addActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 30, 90, 30));
+
+        btn_add1.setBackground(new java.awt.Color(102, 204, 0));
+        btn_add1.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        btn_add1.setForeground(new java.awt.Color(255, 255, 255));
+        btn_add1.setText("Add");
+        btn_add1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_add1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_add1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 30, -1, 30));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 670, 1200, 80));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txt_serachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_serachActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_serachActionPerformed
+
+    private void btn_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_searchActionPerformed
+        // TODO add your handling code here:
+        String query = txt_serach.getText();
+        tbl.setSQLWhere("name LIKE \"%"+query+"%\"");
+    }//GEN-LAST:event_btn_searchActionPerformed
+
+    private void btn_removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_removeActionPerformed
+        // TODO add your handling code here:
+        int[] rows = tbl.getSelectedRows();
+        Vector<String> ids = new Vector<>();
+        DefaultTableModel model = (DefaultTableModel)tbl.getModel();
+        for (int i=0; i < rows.length; i++) ids.add(model.getValueAt(rows[i], 0).toString());
+        for (String id: ids) {
+            try {
+                Connection con = DBConnection.getConnection();
+                String query_insert = "DELETE FROM Product WHERE supplier_id = ?";
+                PreparedStatement par = con.prepareStatement(query_insert);
+                par.setInt(1, Integer.valueOf(id));
+                par.executeUpdate();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        tbl.load_data();
+    }//GEN-LAST:event_btn_removeActionPerformed
+
+    private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addActionPerformed
+        // TODO add your handling code here:
+        new SupplierSynergy.AddItems.LinkProduct().setVisible(true);
+    }//GEN-LAST:event_btn_addActionPerformed
+
+    private void btn_add1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add1ActionPerformed
+        // TODO add your handling code here:
+        new SupplierSynergy.AddItems.AddProduct().setVisible(true);
+    }//GEN-LAST:event_btn_add1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_add;
+    private javax.swing.JButton btn_add1;
+    private javax.swing.JButton btn_remove;
+    private necesario.RSMaterialButtonCircle btn_search;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private lib.JSqlTablel1 tbl_suppliers;
+    private lib.JSqlTablel1 tbl;
+    private javax.swing.JTextField txt_serach;
     // End of variables declaration//GEN-END:variables
 }
