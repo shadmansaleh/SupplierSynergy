@@ -2,10 +2,14 @@
 
 A Supply Chain Management System made on MySQL and Java Swing.
 
-This project primarily devlops a database for storing data related to SupplyChain. Along with mananagement software for it.
+This project primarily develops a database for storing data related to supply chain. Along with management software for it.
 
 Project for CSE-252 (DBMS) course by:
 - Shadman Saleh  (u2004030@student.cuet.ac.bd)
+
+### How to setup
+1. The database migration files are provided here [SupplierSynergy_DB.sql](https://github.com/shadmansaleh/SupplierSynergy/blob/main/db/SupplierSynergy_DB.sql)
+2. The frontend uses java ant build system and can be ran with `ant run` command
 
 ### Screenshots
 <br/><br/>
